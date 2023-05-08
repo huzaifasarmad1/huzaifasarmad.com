@@ -1,5 +1,12 @@
-<div class="home">
-    <h1>Welcome to my portfolio website</h1>
-    <p>Here you can find information about me and my work.</p>
-    <a routerLink="/about">Learn more about me</a>
+<div class="container">
+    <h1>Helloooooo</h1>
+    <p>Click on the pictures to have a beaitiful view</p>
+    <div class="gallery">
+      <img src="../../assets/pic1.jpeg" alt="Picture 1" (click)="showImage('../../assets/pic1.jpeg')">
+      <img src="../../assets/pic2.jpeg" alt="Picture 2" (click)="showImage('../../assets/pic2.jpeg')">
+      <img src="../../assets/pic3.jpeg" alt="Picture 3" (click)="showImage('../../assets/pic3.jpeg')">
+    </div>
+    <div class="modal" [class.active]="showModal" (click)="hideImage()">
+      <img [src]="selectedImage" alt="Selected Image">
+    </div>
   </div>

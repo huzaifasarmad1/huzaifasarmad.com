@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  showModal = false;
+  selectedImage = '';
 
+  showImage(imageUrl: string) {
+    this.selectedImage = imageUrl;
+    this.showModal = true;
+  }
+
+  hideImage() {
+    this.showModal = false;
+    this.selectedImage = '';
+  }
 }
